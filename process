@@ -1,0 +1,16 @@
+#include<stdio.h>
+int strle(char *str)
+{
+	if(*str!='\0')
+		return 1+strle(str+1);
+	else
+		return 0;
+}
+
+int main()
+{
+	char arr[]="abc";
+	int len=strle(arr);
+	printf("%d",len);
+	return 0;
+}
